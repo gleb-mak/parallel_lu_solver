@@ -1,0 +1,9 @@
+#!/bin/bash
+mpicc -c printmatrix.c
+mpicc -c matrixfile.c
+mpicc -c matrixformula.c
+mpicc -c discrepancy.c
+mpicc -c main.c
+mpicc -c formb.c
+mpicc -c solve.c
+mpicc -o run main.o printmatrix.o matrixfile.o matrixformula.o formb.o solve.o discrepancy.o -lm
